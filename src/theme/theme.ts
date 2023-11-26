@@ -4,30 +4,71 @@ import colors from './colors';
 const componentOverrides: ThemeOptions['components'] = {
   MuiTypography: {
     styleOverrides: {
+      root: {
+        fontFamily: 'Poppins',
+      },
       h1: {
         fontSize: '2.5rem',
         fontWeight: 800,
         color: colors.primary,
+        '@media (max-width: 768px)': {
+          fontSize: '1.5rem',
+        },
+        '@media (max-width: 400px)': {
+          fontSize: '1.2rem',
+        },
       },
       h2: {
-        fontSize: '2rem',
+        fontSize: '1.4rem',
         fontWeight: 800,
+        color: colors.skill,
+        '@media (max-width: 768px)': {
+          fontSize: '1rem',
+        },
+        '@media (max-width: 400px)': {
+          fontSize: '0.8rem',
+        },
       },
       h3: {
         fontSize: '1.2rem',
         fontWeight: 600,
+        '@media (max-width: 768px)': {
+          fontSize: '1rem',
+        },
+        '@media (max-width: 400px)': {
+          fontSize: '0.6rem',
+        },
       },
       h4: {
-        fontSize: '1rem',
+        fontSize: '0.8rem',
         fontWeight: 600,
         color: colors.primary,
+        '@media (max-width: 768px)': {
+          fontSize: '0.6rem',
+        },
+        '@media (max-width: 400px)': {
+          fontSize: '0.6rem',
+        },
+      },
+      body1: {
+        fontSize: '0.9rem',
+        color: colors.footer,
+        '@media (max-width: 768px)': {
+          fontSize: '0.8rem',
+        },
+        '@media (max-width: 400px)': {
+          fontSize: '0.6rem',
+        },
       },
       body2: {
-        fontSize: '16px',
+        fontSize: '0.8rem',
         fontWeight: 400,
-        textDecoration: 'underline',
-        '&:hover': {
-          cursor: 'pointer',
+
+        '@media (max-width: 768px)': {
+          fontSize: '0.6rem',
+        },
+        '@media (max-width: 400px)': {
+          fontSize: '0.6rem',
         },
       },
     },
@@ -35,12 +76,53 @@ const componentOverrides: ThemeOptions['components'] = {
   MuiInputBase: {
     styleOverrides: {
       root: {
-        // height: '2.5rem',
         borderRadius: '8px',
         backgroundColor: 'rgba(255, 255, 255, 0.15)',
         '&:hover': {
           backgroundColor: 'rgba(255, 255, 255, 0.25)',
         },
+      },
+    },
+  },
+  MuiFormLabel: {
+    styleOverrides: {
+      root: {
+        color: colors.footer,
+        '&$focused': {
+          color: colors.footer,
+        },
+      },
+    },
+  },
+  MuiListItemIcon: {
+    styleOverrides: {
+      root: {
+        minWidth: '30px',
+        width: '30px',
+      },
+    },
+  },
+  MuiButton: {
+    styleOverrides: {
+      root: {
+        borderRadius: '8px',
+        textTransform: 'capitalize',
+        fontWeight: 600,
+        fontSize: '1rem',
+        padding: '0rem 1rem',
+        '@media (max-width: 768px)': {
+          fontSize: '0.8rem',
+        },
+      },
+      // containedPrimary: {
+      //   color: colors.footer,
+      // },
+      // containedSecondary: {
+      //   color: colors.footer,
+      // },
+      outlinedPrimary: {
+        color: colors.footer,
+        borderColor: colors.footer,
       },
     },
   },
